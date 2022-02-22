@@ -12,13 +12,13 @@ import (
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
 
+type Sides int
+
 const (
 	SidesTriangle Sides = 3
 	SidesSquare   Sides = 4
 	SidesCircle   Sides = 0
 )
-
-type Sides int
 
 func CalcSquare(sideLen float64, TypeName Sides) float64 {
 
