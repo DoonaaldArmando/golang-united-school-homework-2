@@ -13,19 +13,21 @@ import (
 // CalcSquare(10.0, SidesCircle)
 
 const (
-	Triangle int = 3
-	Square   int = 4
-	Circle   int = 0
+	SidesTriangle int = 3
+	SidesSquare   int = 4
+	SidesCircle   int = 0
 )
 
-func CalcSquare(sideLen float64, sidesNum int) float64 {
+type YourTypeNameHere int
 
-	switch {
-	case sidesNum < Circle:
+func CalcSquare(sideLen float64, YourTypeNameHere int) float64 {
+
+	switch YourTypeNameHere {
+	case SidesCircle:
 		return math.Pi * sideLen * sideLen
-	case sidesNum < Triangle:
+	case SidesTriangle:
 		return (sideLen * (math.Sqrt((sideLen*sideLen - (sideLen*sideLen)/4)))) / 2
-	case sidesNum < Square:
+	case SidesSquare:
 		return sideLen * sideLen
 	default:
 		return 0
