@@ -13,14 +13,14 @@ import (
 // CalcSquare(10.0, SidesCircle)
 
 const (
-	SidesTriangle YourTypeNameHere = 3
-	SidesSquare   YourTypeNameHere = 4
-	SidesCircle   YourTypeNameHere = 0
+	SidesTriangle Sides = 3
+	SidesSquare   Sides = 4
+	SidesCircle   Sides = 0
 )
 
-type YourTypeNameHere int
+type Sides int
 
-func CalcSquare(sideLen float64, TypeName YourTypeNameHere) float64 {
+func CalcSquare(sideLen float64, TypeName Sides) float64 {
 
 	switch TypeName {
 	case SidesCircle:
