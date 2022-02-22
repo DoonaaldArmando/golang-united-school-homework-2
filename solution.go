@@ -12,14 +12,20 @@ import (
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
 
+const (
+	Triangle int = 3
+	Square   int = 4
+	Circle   int = 0
+)
+
 func CalcSquare(sideLen float64, sidesNum int) float64 {
 
 	switch {
-	case sidesNum < 0:
+	case sidesNum < Circle:
 		return math.Pi * sideLen * sideLen
-	case sidesNum < 3:
+	case sidesNum < Triangle:
 		return (sideLen * (math.Sqrt((sideLen*sideLen - (sideLen*sideLen)/4)))) / 2
-	case sidesNum < 4:
+	case sidesNum < Square:
 		return sideLen * sideLen
 	default:
 		return 0
